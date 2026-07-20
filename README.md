@@ -1,72 +1,325 @@
-<<<<<<< HEAD
 # 🎓 BYOD Classroom Management System
 
-## Overview
-This platform is fundamentally built around **Securing** and **Increasing Productivity** of BYOD (Bring Your Own Device) classroom environments. 
+A modern **Bring Your Own Device (BYOD)** classroom management system that enables teachers to monitor student productivity, communicate in real time, and create a focused learning environment through secure authentication, activity tracking, and website access control.
 
-It accomplishes this by dividing the architecture into specialized Student and Teacher dashboards, enabling tight oversight, real-time communication, and strict productivity tracking without needing MDM (Mobile Device Management) level intrusive hardware controls—making it perfect for personal BYOD environments.
+---
 
-## 🚀 Key Productivity & Security Features
+## ✨ Features
 
-### 1. **Real-Time Focus Connectivity (Socket.IO)**
-The backbone of the application runs on real-time persistent websockets. Teachers can instantly broadcast announcements and alerts to all connected student devices globally. This builds immediate compliance and removes the latency of emails or LMS updates. 
+### 👨‍🏫 Teacher Dashboard
+- Secure Login & Authentication
+- Real-Time Announcements
+- Website Blocklist Management
+- Student Productivity Monitoring
+- Activity Log Viewer
+- Export Student Reports
+- Classroom Management
 
-### 2. **Productivity Tracking Engine**
-Students log their tasks directly on their dashboard and track their engaged time using a robust real-time timer metric. Every action (starting a task, pressing stop) generates an immutable timestamped log sent to the Node.js backend. Teachers can audit this database visually or export it instantly to `.gz` format to enforce accountability.
+### 👨‍🎓 Student Dashboard
+- Secure Login
+- Task Management
+- Live Productivity Timer
+- Real-Time Announcements
+- Website Access Checker
+- Activity History
+- Personal Dashboard
 
-### 3. **Dynamic Website Filtering & Security Layer**
-To enforce focus during work sessions without heavy MDM software, the application uses an active "Website Access Checker". Teachers maintain a dynamic global blocklist of URLs via their Teacher Panel. Students can check (or are forced to check) domains, which queries the database for approval statuses. If denied, it visibly flags as a blocked resource—an organic, software-level approach to BYOD securing.
+### ⚡ Real-Time Communication
+- Socket.IO Integration
+- Instant Announcements
+- Live Updates
+- Fast Synchronization
 
-### 4. **Secure Authentication & Identity Matrix**
-User security relies on heavily curated JSON Web Tokens (`jwt`) managed via robust httpOnly cookie-parsers and session storage protocols, utilizing bcrypt hashing mechanisms preventing credential compromises, fulfilling the core *Securing* directive.
+### 📊 Productivity Tracking
+- Start/Stop Task Timer
+- Time Tracking
+- Activity Logging
+- Timestamp Recording
+- Student Performance Monitoring
 
-## 🛠 Project Structure
+### 🌐 Website Access Control
+- Teacher Managed Blocklist
+- Website Validation
+- Secure Browsing
+- Focus Mode
 
-The project has been separated into two distinct micro-architectures for scaling:
-- **`/backend`**: Node.js, Express, MongoDB (Mongoose), Socket.IO server.
-- **`/frontend`**: High-performance Vanilla Vite server with a highly refined Glassmorphism interface.
+### 🔒 Security
+- JWT Authentication
+- Password Hashing (bcrypt)
+- HTTP-only Cookies
+- Protected Routes
+- Role-Based Access Control
 
-## 💻 How to Run Locally
+---
 
-### 1. Backend Server
-1. Navigate to the `backend/` directory:
-   ```bash
-   cd backend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Establish your `.env` file containing `MONGO_URI`, `JWT_SECRET`, and `SESSION_SECRET`.
-4. (Optional) Seed dummy data for testing:
-   ```bash
-   node scripts/seed.js
-   ```
-5. Start the API using Dev mode:
-   ```bash
-   npm run dev
-   ```
-   *The backend defaults to port 3000.*
+# 🛠️ Tech Stack
 
-### 2. Frontend Development Server
-1. Open a new terminal and navigate to the `frontend/` directory:
-   ```bash
-   cd frontend
-   ```
-2. Install the Vite dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the dev server:
-   ```bash
-   npm run dev
-   ```
-   *Vite typically maps to `http://localhost:5173`.*
+## Frontend
 
-> **Test Credentials:** If you ran the database seed script, you can log in as the teacher (`teacher@school.edu` / `teacher123`) or a student (`alice@school.edu` / `student123`).
+- Vite
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Socket.IO Client
 
-## 🎨 Premium UI Guidelines
-The frontend utilizes a state-of-the-art Glassmorphism dark mode featuring heavily curated gradients (`var(--primary)`, `var(--secondary)`, `var(--accent)`), fluid micro-animations (cards hover transforms, glowing borders on focus), ensuring a visually stunning interaction that commands modern engagement standards.
-=======
-# BYOD
->>>>>>> f57a282fbd6b8ed1f01f62e17e541c9dcbd6b213
+## Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- Socket.IO
+- JWT Authentication
+- bcrypt
+- Cookie Parser
+- dotenv
+
+---
+
+# 📂 Project Structure
+
+```text
+BYOD/
+│
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── scripts/
+│   ├── socket/
+│   ├── utils/
+│   ├── server.js
+│   └── package.json
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── App.js
+│   ├── vite.config.js
+│   └── package.json
+│
+└── README.md
+```
+
+---
+
+# 🚀 Getting Started
+
+## 1. Clone Repository
+
+```bash
+git clone https://github.com/your-username/BYOD.git
+cd BYOD
+```
+
+---
+
+# ⚙ Backend Setup
+
+Move to backend
+
+```bash
+cd backend
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Create a `.env` file
+
+```env
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+SESSION_SECRET=your_session_secret
+```
+
+(Optional)
+
+Seed Demo Data
+
+```bash
+node scripts/seed.js
+```
+
+Start Backend
+
+```bash
+npm run dev
+```
+
+Backend runs at
+
+```
+http://localhost:3000
+```
+
+---
+
+# 💻 Frontend Setup
+
+Move to frontend
+
+```bash
+cd frontend
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run project
+
+```bash
+npm run dev
+```
+
+Frontend runs at
+
+```
+http://localhost:5173
+```
+
+---
+
+# 🔑 Demo Credentials
+
+### Teacher
+
+```text
+Email    : teacher@school.edu
+Password : teacher123
+```
+
+### Student
+
+```text
+Email    : alice@school.edu
+Password : student123
+```
+
+> Available after running the seed script.
+
+---
+
+# 📊 Application Workflow
+
+```text
+Teacher Login
+      │
+      ▼
+Manage Students
+      │
+      ├────────► Send Live Announcement
+      │
+      ├────────► Block Websites
+      │
+      ├────────► View Student Logs
+      │
+      └────────► Export Reports
+
+
+Student Login
+      │
+      ▼
+Create Tasks
+      │
+      ▼
+Start Productivity Timer
+      │
+      ▼
+Receive Live Announcements
+      │
+      ▼
+Check Website Accessibility
+      │
+      ▼
+Activity Stored in Database
+```
+
+---
+
+# 📸 Screenshots
+
+Add your project screenshots here.
+
+```
+screenshots/
+
+├── Login.png
+├── TeacherDashboard.png
+├── StudentDashboard.png
+├── Productivity.png
+└── WebsiteChecker.png
+```
+
+---
+
+# 🚀 Future Enhancements
+
+- AI-based Productivity Analysis
+- Attendance Management
+- Assignment Submission
+- Classroom Analytics
+- Email Notifications
+- Mobile Responsive Design
+- Dark/Light Theme
+- Multi-Class Support
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+
+2. Create a new branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit changes
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push changes
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# 👨‍💻 Developer
+**Mayank Peswani**
+**Prem Kumar Gupta**
+
+B.Tech CSE Student
+
+Passionate about Full Stack Development, Data Structures & Algorithms, and Software Engineering.
+
+---
+
+## ⭐ If you like this project, don't forget to Star the repository!
