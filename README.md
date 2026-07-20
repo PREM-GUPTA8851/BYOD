@@ -267,7 +267,6 @@ Activity Stored in MongoDB
 
 <img width="1901" src="https://github.com/user-attachments/assets/87fa268a-f43b-4fcc-b4dc-b650c2beb1be"/>
 
-<img width="1916" src="https://github.com/user-attachments/assets/a279c09c-c48e-4f00-b57e-0f46ea54644e"/>
 
 ---
 
