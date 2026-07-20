@@ -331,8 +331,6 @@ This project is licensed under the **MIT License**.
 
 <div align="center">
 
-## ⭐ If you found this project useful, don't forget to Star the Repository!
-
-Made with ❤️ using Node.js, Express, MongoDB & Socket.IO
+Made with using Node.js, Express, MongoDB & Socket.IO
 
 </div>
