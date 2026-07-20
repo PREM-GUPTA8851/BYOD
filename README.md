@@ -1,75 +1,96 @@
-<img width="801" height="551" alt="image" src="https://github.com/user-attachments/assets/bcde8eab-78cf-4ede-9023-bb44f5d45a96" /># 🎓 BYOD Classroom Management System
+# 🎓 BYOD Classroom Management System
 
-A modern **Bring Your Own Device (BYOD)** classroom management system that enables teachers to monitor student productivity, communicate in real time, and create a focused learning environment through secure authentication, activity tracking, and website access control.
+<p align="center">
+
+![Node.js](https://img.shields.io/badge/Node.js-20.x-green?style=for-the-badge&logo=node.js)
+![Express](https://img.shields.io/badge/Express.js-Backend-black?style=for-the-badge&logo=express)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-green?style=for-the-badge&logo=mongodb)
+![Socket.IO](https://img.shields.io/badge/Socket.IO-Real_Time-black?style=for-the-badge&logo=socket.io)
+![JWT](https://img.shields.io/badge/JWT-Authentication-red?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+
+</p>
 
 ---
 
-## ✨ Features
+## 📖 About
 
-### 👨‍🏫 Teacher Dashboard
-- Secure Login & Authentication
+**BYOD Classroom Management System** is a full-stack web application designed for **Bring Your Own Device (BYOD)** classrooms. It helps teachers monitor student productivity, communicate instantly, manage website access, and create a distraction-free learning environment using real-time technologies.
+
+---
+
+# ✨ Features
+
+## 👨‍🏫 Teacher Dashboard
+
+- Secure Login
 - Real-Time Announcements
 - Website Blocklist Management
-- Student Productivity Monitoring
-- Activity Log Viewer
-- Export Student Reports
+- Monitor Student Activities
+- Productivity Analytics
+- Export Student Logs
 - Classroom Management
 
-### 👨‍🎓 Student Dashboard
+---
+
+## 👨‍🎓 Student Dashboard
+
 - Secure Login
 - Task Management
 - Live Productivity Timer
-- Real-Time Announcements
+- Receive Live Announcements
 - Website Access Checker
 - Activity History
 - Personal Dashboard
 
-### ⚡ Real-Time Communication
+---
+
+## ⚡ Real-Time Communication
+
 - Socket.IO Integration
-- Instant Announcements
-- Live Updates
-- Fast Synchronization
-
-### 📊 Productivity Tracking
-- Start/Stop Task Timer
-- Time Tracking
-- Activity Logging
-- Timestamp Recording
-- Student Performance Monitoring
-
-### 🌐 Website Access Control
-- Teacher Managed Blocklist
-- Website Validation
-- Secure Browsing
-- Focus Mode
-
-### 🔒 Security
-- JWT Authentication
-- Password Hashing (bcrypt)
-- HTTP-only Cookies
-- Protected Routes
-- Role-Based Access Control
+- Instant Notifications
+- Live Synchronization
+- Classroom Broadcast System
 
 ---
 
-# 🛠️ Tech Stack
+## 🌐 Website Access Control
 
-## Frontend
+- Dynamic Website Blocklist
+- Website Validation
+- Focus Mode
+- Teacher Controlled Access
 
-- Vite
+---
+
+## 🔒 Security
+
+- JWT Authentication
+- Password Hashing (bcrypt)
+- Protected APIs
+- HTTP-only Cookies
+- Role Based Authorization
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
 - HTML5
 - CSS3
-- JavaScript (ES6+)
+- JavaScript (ES6)
+- Vite
 - Socket.IO Client
 
-## Backend
+### Backend
 
 - Node.js
 - Express.js
 - MongoDB
 - Mongoose
 - Socket.IO
-- JWT Authentication
+- JWT
 - bcrypt
 - Cookie Parser
 - dotenv
@@ -79,30 +100,26 @@ A modern **Bring Your Own Device (BYOD)** classroom management system that enabl
 # 📂 Project Structure
 
 ```text
-BYOD/
+BYOD
 │
-├── backend/
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── scripts/
-│   ├── socket/
-│   ├── utils/
-│   ├── server.js
-│   └── package.json
+├── backend
+│   ├── config
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── socket
+│   ├── scripts
+│   ├── utils
+│   └── server.js
 │
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   └── App.js
-│   ├── vite.config.js
-│   └── package.json
+├── frontend
+│   ├── public
+│   ├── src
+│   ├── assets
+│   ├── components
+│   ├── pages
+│   └── services
 │
 └── README.md
 ```
@@ -111,10 +128,10 @@ BYOD/
 
 # 🚀 Getting Started
 
-## 1. Clone Repository
+## Clone Repository
 
 ```bash
-git clone https://github.com/your-username/BYOD.git
+git clone https://github.com/<your-username>/BYOD.git
 cd BYOD
 ```
 
@@ -122,41 +139,32 @@ cd BYOD
 
 # ⚙ Backend Setup
 
-Move to backend
-
 ```bash
 cd backend
-```
-
-Install dependencies
-
-```bash
 npm install
 ```
 
-Create a `.env` file
+Create `.env`
 
 ```env
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_secret
 SESSION_SECRET=your_session_secret
 ```
 
 (Optional)
 
-Seed Demo Data
-
 ```bash
 node scripts/seed.js
 ```
 
-Start Backend
+Start Server
 
 ```bash
 npm run dev
 ```
 
-Backend runs at
+Runs on
 
 ```
 http://localhost:3000
@@ -166,25 +174,13 @@ http://localhost:3000
 
 # 💻 Frontend Setup
 
-Move to frontend
-
 ```bash
 cd frontend
-```
-
-Install dependencies
-
-```bash
 npm install
-```
-
-Run project
-
-```bash
 npm run dev
 ```
 
-Frontend runs at
+Runs on
 
 ```
 http://localhost:5173
@@ -196,19 +192,23 @@ http://localhost:5173
 
 ### Teacher
 
-```text
-Email    : teacher@school.edu
-Password : teacher123
+```
+Email:
+teacher@school.edu
+
+Password:
+teacher123
 ```
 
 ### Student
 
-```text
-Email    : alice@school.edu
-Password : student123
 ```
+Email:
+alice@school.edu
 
-> Available after running the seed script.
+Password:
+student123
+```
 
 ---
 
@@ -220,102 +220,97 @@ Teacher Login
       ▼
 Manage Students
       │
-      ├────────► Send Live Announcement
-      │
-      ├────────► Block Websites
-      │
-      ├────────► View Student Logs
-      │
-      └────────► Export Reports
-
+      ├── Send Live Announcement
+      ├── Manage Website Blocklist
+      ├── Monitor Student Logs
+      └── Export Reports
 
 Student Login
       │
       ▼
-Create Tasks
+Create Task
       │
       ▼
 Start Productivity Timer
       │
       ▼
-Receive Live Announcements
+Receive Live Announcement
       │
       ▼
-Check Website Accessibility
+Check Website Access
       │
       ▼
-Activity Stored in Database
+Activity Stored in MongoDB
 ```
 
 ---
 
 # 📸 Screenshots
-```
-screenshots/
 
-├── Login.png
-<img width="911" height="1078" alt="image" src="https://github.com/user-attachments/assets/8c94ff54-526f-433b-89f6-6155de7a728a" />
+## 🔐 Login Page
 
-├── TeacherDashboard.png
-<img width="1836" height="1073" alt="image" src="https://github.com/user-attachments/assets/161053c4-536c-4095-a8fb-015d9ff04e43" />
-<img width="1915" height="1078" alt="image" src="https://github.com/user-attachments/assets/8af37130-f74f-4d9e-af37-019ead495c49" />
-<img width="1865" height="1077" alt="image" src="https://github.com/user-attachments/assets/3081f33c-611f-4762-ab02-e999d847b46b" />
+<img width="911" src="https://github.com/user-attachments/assets/8c94ff54-526f-433b-89f6-6155de7a728a"/>
 
-├── StudentDashboard.png
-<img width="1901" height="1077" alt="image" src="https://github.com/user-attachments/assets/87fa268a-f43b-4fcc-b4dc-b650c2beb1be" />
-<img width="1916" height="1077" alt="image" src="https://github.com/user-attachments/assets/a279c09c-c48e-4f00-b57e-0f46ea54644e" />
+---
 
-├── Productivity.png
-<img width="1916" height="1077" alt="image" src="https://github.com/user-attachments/assets/2b1afec9-5790-4276-8ac8-ee70bad680db" />
+## 👨‍🏫 Teacher Dashboard
 
-└── WebsiteChecker.png
-<img width="605" height="1078" alt="image" src="https://github.com/user-attachments/assets/c7a70974-65ba-4500-afc8-44db0b334e3b" />
+<img width="1836" src="https://github.com/user-attachments/assets/161053c4-536c-4095-a8fb-015d9ff04e43"/>
 
-└── Announcement.png
-<img width="1311" height="1076" alt="image" src="https://github.com/user-attachments/assets/74b30961-1eb2-4853-bab4-93736e86a7ee" />
+<img width="1915" src="https://github.com/user-attachments/assets/8af37130-f74f-4d9e-af37-019ead495c49"/>
 
-```
+<img width="1865" src="https://github.com/user-attachments/assets/3081f33c-611f-4762-ab02-e999d847b46b"/>
+
+---
+
+## 👨‍🎓 Student Dashboard
+
+<img width="1901" src="https://github.com/user-attachments/assets/87fa268a-f43b-4fcc-b4dc-b650c2beb1be"/>
+
+<img width="1916" src="https://github.com/user-attachments/assets/a279c09c-c48e-4f00-b57e-0f46ea54644e"/>
+
+---
+
+## ⏱ Productivity Timer
+
+<img width="1916" src="https://github.com/user-attachments/assets/2b1afec9-5790-4276-8ac8-ee70bad680db"/>
+
+---
+
+## 🌐 Website Access Checker
+
+<img width="605" src="https://github.com/user-attachments/assets/c7a70974-65ba-4500-afc8-44db0b334e3b"/>
+
+---
+
+## 📢 Live Announcement
+
+<img width="1311" src="https://github.com/user-attachments/assets/74b30961-1eb2-4853-bab4-93736e86a7ee"/>
 
 ---
 
 # 🚀 Future Enhancements
 
-- AI-based Productivity Analysis
+- AI-Based Productivity Analysis
 - Attendance Management
 - Assignment Submission
-- Classroom Analytics
+- Analytics Dashboard
 - Email Notifications
-- Mobile Responsive Design
-- Dark/Light Theme
+- Mobile Responsive UI
+- Dark / Light Theme
 - Multi-Class Support
 
 ---
 
 # 🤝 Contributing
 
-Contributions are welcome.
-
-1. Fork the repository
-
-2. Create a new branch
-
 ```bash
 git checkout -b feature-name
-```
-
-3. Commit changes
-
-```bash
 git commit -m "Added new feature"
-```
-
-4. Push changes
-
-```bash
 git push origin feature-name
 ```
 
-5. Open a Pull Request
+Create a Pull Request.
 
 ---
 
@@ -325,14 +320,20 @@ This project is licensed under the **MIT License**.
 
 ---
 
-# 👨‍💻 Developer
-**Mayank Peswani**
-**Prem Kumar Gupta**
+# 👨‍💻 Developers
 
-B.Tech CSE Student
+### Mayank Peswani
 
-Passionate about Full Stack Development, Data Structures & Algorithms, and Software Engineering.
+### Prem Kumar Gupta
+
+**B.Tech Computer Science & Engineering**
 
 ---
 
-## ⭐ If you like this project, don't forget to Star the repository!
+<div align="center">
+
+## ⭐ If you found this project useful, don't forget to Star the Repository!
+
+Made with ❤️ using Node.js, Express, MongoDB & Socket.IO
+
+</div>
