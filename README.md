@@ -1,4 +1,4 @@
-# 🎓 BYOD Classroom Management System
+<img width="801" height="551" alt="image" src="https://github.com/user-attachments/assets/bcde8eab-78cf-4ede-9023-bb44f5d45a96" /># 🎓 BYOD Classroom Management System
 
 A modern **Bring Your Own Device (BYOD)** classroom management system that enables teachers to monitor student productivity, communicate in real time, and create a focused learning environment through secure authentication, activity tracking, and website access control.
 
@@ -250,17 +250,30 @@ Activity Stored in Database
 ---
 
 # 📸 Screenshots
-
-Add your project screenshots here.
-
 ```
 screenshots/
 
 ├── Login.png
+<img width="911" height="1078" alt="image" src="https://github.com/user-attachments/assets/8c94ff54-526f-433b-89f6-6155de7a728a" />
+
 ├── TeacherDashboard.png
+<img width="1836" height="1073" alt="image" src="https://github.com/user-attachments/assets/161053c4-536c-4095-a8fb-015d9ff04e43" />
+<img width="1915" height="1078" alt="image" src="https://github.com/user-attachments/assets/8af37130-f74f-4d9e-af37-019ead495c49" />
+<img width="1865" height="1077" alt="image" src="https://github.com/user-attachments/assets/3081f33c-611f-4762-ab02-e999d847b46b" />
+
 ├── StudentDashboard.png
+<img width="1901" height="1077" alt="image" src="https://github.com/user-attachments/assets/87fa268a-f43b-4fcc-b4dc-b650c2beb1be" />
+<img width="1916" height="1077" alt="image" src="https://github.com/user-attachments/assets/a279c09c-c48e-4f00-b57e-0f46ea54644e" />
+
 ├── Productivity.png
+<img width="1916" height="1077" alt="image" src="https://github.com/user-attachments/assets/2b1afec9-5790-4276-8ac8-ee70bad680db" />
+
 └── WebsiteChecker.png
+<img width="605" height="1078" alt="image" src="https://github.com/user-attachments/assets/c7a70974-65ba-4500-afc8-44db0b334e3b" />
+
+└── Announcement.png
+<img width="1311" height="1076" alt="image" src="https://github.com/user-attachments/assets/74b30961-1eb2-4853-bab4-93736e86a7ee" />
+
 ```
 
 ---
